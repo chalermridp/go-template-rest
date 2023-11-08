@@ -28,5 +28,5 @@ func (d DefaultUserService) GetById(id string) (*dao.User, error) {
 }
 
 func (d DefaultUserService) Create(user *dao.User) (*dao.User, error) {
-	return d.Create(user)
+	return d.userRepository.Create(user)
 }
