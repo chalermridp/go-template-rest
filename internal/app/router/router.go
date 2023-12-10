@@ -12,7 +12,7 @@ func NewRouter(init *config.Initialization) *gin.Engine {
 
 	api := router.Group("/api")
 	{
-		user := api.Group("/user")
+		user := api.Group("/users")
 		user.GET("", init.UserController.GetAll)
 		user.GET("/:userID", init.UserController.GetById)
 		user.POST("", init.UserController.Create)
